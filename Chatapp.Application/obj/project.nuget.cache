@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "K9tsuBi40Su41G4dGtp1TWM+6+jKMqrGjM83PA7gejD0shSQd2DfML0dKH6a1ArMyVJVHzomeY/N2KWagK/MXw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\tobia\\Projects\\chatapp\\Chatapp.Application\\Chatapp.Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\tobia\\.nuget\\packages\\fluentvalidation\\11.9.0\\fluentvalidation.11.9.0.nupkg.sha512",
+    "C:\\Users\\tobia\\.nuget\\packages\\mediatr\\12.2.0\\mediatr.12.2.0.nupkg.sha512",
+    "C:\\Users\\tobia\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
+    "C:\\Users\\tobia\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
