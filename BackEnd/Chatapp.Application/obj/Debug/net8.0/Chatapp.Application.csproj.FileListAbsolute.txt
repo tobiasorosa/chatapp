@@ -1,0 +1,16 @@
+C:\Users\tobia\Projects\chatapp\BackEnd\Chatapp.Application\bin\Debug\net8.0\Chatapp.Application.deps.json
+C:\Users\tobia\Projects\chatapp\BackEnd\Chatapp.Application\bin\Debug\net8.0\Chatapp.Application.dll
+C:\Users\tobia\Projects\chatapp\BackEnd\Chatapp.Application\bin\Debug\net8.0\Chatapp.Application.pdb
+C:\Users\tobia\Projects\chatapp\BackEnd\Chatapp.Application\bin\Debug\net8.0\Chatapp.Core.dll
+C:\Users\tobia\Projects\chatapp\BackEnd\Chatapp.Application\bin\Debug\net8.0\Chatapp.Core.pdb
+C:\Users\tobia\Projects\chatapp\BackEnd\Chatapp.Application\obj\Debug\net8.0\Chatapp.Application.csproj.AssemblyReference.cache
+C:\Users\tobia\Projects\chatapp\BackEnd\Chatapp.Application\obj\Debug\net8.0\Chatapp.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tobia\Projects\chatapp\BackEnd\Chatapp.Application\obj\Debug\net8.0\Chatapp.Application.AssemblyInfoInputs.cache
+C:\Users\tobia\Projects\chatapp\BackEnd\Chatapp.Application\obj\Debug\net8.0\Chatapp.Application.AssemblyInfo.cs
+C:\Users\tobia\Projects\chatapp\BackEnd\Chatapp.Application\obj\Debug\net8.0\Chatapp.Application.csproj.CoreCompileInputs.cache
+C:\Users\tobia\Projects\chatapp\BackEnd\Chatapp.Application\obj\Debug\net8.0\Chatapp.Application.sourcelink.json
+C:\Users\tobia\Projects\chatapp\BackEnd\Chatapp.Application\obj\Debug\net8.0\Chatapp.Application.csproj.CopyComplete
+C:\Users\tobia\Projects\chatapp\BackEnd\Chatapp.Application\obj\Debug\net8.0\Chatapp.Application.dll
+C:\Users\tobia\Projects\chatapp\BackEnd\Chatapp.Application\obj\Debug\net8.0\refint\Chatapp.Application.dll
+C:\Users\tobia\Projects\chatapp\BackEnd\Chatapp.Application\obj\Debug\net8.0\Chatapp.Application.pdb
+C:\Users\tobia\Projects\chatapp\BackEnd\Chatapp.Application\obj\Debug\net8.0\ref\Chatapp.Application.dll
