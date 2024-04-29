@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -10,7 +10,6 @@
 
   <ItemGroup>
     <Folder Include="Users\CommandSide\Commands\Remove\" />
-    <Folder Include="Users\CommandSide\Entities\" />
   </ItemGroup>
 
   <ItemGroup>

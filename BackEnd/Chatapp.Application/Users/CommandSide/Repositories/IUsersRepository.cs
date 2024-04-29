@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Chatapp.Application.Users.CommandSide.Repositories
 {
-    internal interface IUsersRepository
+    public interface IUsersRepository
     {
     }
 }
