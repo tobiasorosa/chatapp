@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tobia\\Projects\\chatapp\\BackEnd\\Chatapp.Repository\\Chatapp.Repository.csproj": {}
+    "E:\\Programacao\\Projects\\chatapp\\BackEnd\\Chatapp.Repository\\Chatapp.Repository.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tobia\\Projects\\chatapp\\BackEnd\\Chatapp.Application\\Chatapp.Application.csproj": {
+    "E:\\Programacao\\Projects\\chatapp\\BackEnd\\Chatapp.Application\\Chatapp.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tobia\\Projects\\chatapp\\BackEnd\\Chatapp.Application\\Chatapp.Application.csproj",
+        "projectUniqueName": "E:\\Programacao\\Projects\\chatapp\\BackEnd\\Chatapp.Application\\Chatapp.Application.csproj",
         "projectName": "Chatapp.Application",
-        "projectPath": "C:\\Users\\tobia\\Projects\\chatapp\\BackEnd\\Chatapp.Application\\Chatapp.Application.csproj",
-        "packagesPath": "C:\\Users\\tobia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tobia\\Projects\\chatapp\\BackEnd\\Chatapp.Application\\obj\\",
+        "projectPath": "E:\\Programacao\\Projects\\chatapp\\BackEnd\\Chatapp.Application\\Chatapp.Application.csproj",
+        "packagesPath": "C:\\Users\\rafae\\.nuget\\packages\\",
+        "outputPath": "E:\\Programacao\\Projects\\chatapp\\BackEnd\\Chatapp.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\tobia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rafae\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\tobia\\Projects\\chatapp\\BackEnd\\Chatapp.Core\\Chatapp.Core.csproj": {
-                "projectPath": "C:\\Users\\tobia\\Projects\\chatapp\\BackEnd\\Chatapp.Core\\Chatapp.Core.csproj"
+              "E:\\Programacao\\Projects\\chatapp\\BackEnd\\Chatapp.Core\\Chatapp.Core.csproj": {
+                "projectPath": "E:\\Programacao\\Projects\\chatapp\\BackEnd\\Chatapp.Core\\Chatapp.Core.csproj"
               }
             }
           }
@@ -38,6 +38,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -97,21 +102,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\tobia\\Projects\\chatapp\\BackEnd\\Chatapp.Core\\Chatapp.Core.csproj": {
+    "E:\\Programacao\\Projects\\chatapp\\BackEnd\\Chatapp.Core\\Chatapp.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tobia\\Projects\\chatapp\\BackEnd\\Chatapp.Core\\Chatapp.Core.csproj",
+        "projectUniqueName": "E:\\Programacao\\Projects\\chatapp\\BackEnd\\Chatapp.Core\\Chatapp.Core.csproj",
         "projectName": "Chatapp.Core",
-        "projectPath": "C:\\Users\\tobia\\Projects\\chatapp\\BackEnd\\Chatapp.Core\\Chatapp.Core.csproj",
-        "packagesPath": "C:\\Users\\tobia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tobia\\Projects\\chatapp\\BackEnd\\Chatapp.Core\\obj\\",
+        "projectPath": "E:\\Programacao\\Projects\\chatapp\\BackEnd\\Chatapp.Core\\Chatapp.Core.csproj",
+        "packagesPath": "C:\\Users\\rafae\\.nuget\\packages\\",
+        "outputPath": "E:\\Programacao\\Projects\\chatapp\\BackEnd\\Chatapp.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\tobia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rafae\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -131,6 +136,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -144,6 +154,10 @@
             "MediatR": {
               "target": "Package",
               "version": "[12.2.0, )"
+            },
+            "Microsoft.AspNetCore.SignalR.Common": {
+              "target": "Package",
+              "version": "[8.0.4, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -190,21 +204,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\tobia\\Projects\\chatapp\\BackEnd\\Chatapp.Repository\\Chatapp.Repository.csproj": {
+    "E:\\Programacao\\Projects\\chatapp\\BackEnd\\Chatapp.Repository\\Chatapp.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tobia\\Projects\\chatapp\\BackEnd\\Chatapp.Repository\\Chatapp.Repository.csproj",
+        "projectUniqueName": "E:\\Programacao\\Projects\\chatapp\\BackEnd\\Chatapp.Repository\\Chatapp.Repository.csproj",
         "projectName": "Chatapp.Repository",
-        "projectPath": "C:\\Users\\tobia\\Projects\\chatapp\\BackEnd\\Chatapp.Repository\\Chatapp.Repository.csproj",
-        "packagesPath": "C:\\Users\\tobia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tobia\\Projects\\chatapp\\BackEnd\\Chatapp.Repository\\obj\\",
+        "projectPath": "E:\\Programacao\\Projects\\chatapp\\BackEnd\\Chatapp.Repository\\Chatapp.Repository.csproj",
+        "packagesPath": "C:\\Users\\rafae\\.nuget\\packages\\",
+        "outputPath": "E:\\Programacao\\Projects\\chatapp\\BackEnd\\Chatapp.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\tobia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\rafae\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -218,8 +232,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\tobia\\Projects\\chatapp\\BackEnd\\Chatapp.Application\\Chatapp.Application.csproj": {
-                "projectPath": "C:\\Users\\tobia\\Projects\\chatapp\\BackEnd\\Chatapp.Application\\Chatapp.Application.csproj"
+              "E:\\Programacao\\Projects\\chatapp\\BackEnd\\Chatapp.Application\\Chatapp.Application.csproj": {
+                "projectPath": "E:\\Programacao\\Projects\\chatapp\\BackEnd\\Chatapp.Application\\Chatapp.Application.csproj"
               }
             }
           }
@@ -228,6 +242,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -263,7 +282,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

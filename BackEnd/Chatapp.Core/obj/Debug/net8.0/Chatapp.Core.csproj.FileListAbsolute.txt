@@ -11,3 +11,16 @@ C:\Users\tobia\Projects\chatapp\BackEnd\Chatapp.Core\obj\Debug\net8.0\Chatapp.Co
 C:\Users\tobia\Projects\chatapp\BackEnd\Chatapp.Core\obj\Debug\net8.0\refint\Chatapp.Core.dll
 C:\Users\tobia\Projects\chatapp\BackEnd\Chatapp.Core\obj\Debug\net8.0\Chatapp.Core.pdb
 C:\Users\tobia\Projects\chatapp\BackEnd\Chatapp.Core\obj\Debug\net8.0\ref\Chatapp.Core.dll
+E:\Programacao\Projects\chatapp\BackEnd\Chatapp.Core\bin\Debug\net8.0\Chatapp.Core.deps.json
+E:\Programacao\Projects\chatapp\BackEnd\Chatapp.Core\bin\Debug\net8.0\Chatapp.Core.dll
+E:\Programacao\Projects\chatapp\BackEnd\Chatapp.Core\bin\Debug\net8.0\Chatapp.Core.pdb
+E:\Programacao\Projects\chatapp\BackEnd\Chatapp.Core\obj\Debug\net8.0\Chatapp.Core.csproj.AssemblyReference.cache
+E:\Programacao\Projects\chatapp\BackEnd\Chatapp.Core\obj\Debug\net8.0\Chatapp.Core.GeneratedMSBuildEditorConfig.editorconfig
+E:\Programacao\Projects\chatapp\BackEnd\Chatapp.Core\obj\Debug\net8.0\Chatapp.Core.AssemblyInfoInputs.cache
+E:\Programacao\Projects\chatapp\BackEnd\Chatapp.Core\obj\Debug\net8.0\Chatapp.Core.AssemblyInfo.cs
+E:\Programacao\Projects\chatapp\BackEnd\Chatapp.Core\obj\Debug\net8.0\Chatapp.Core.csproj.CoreCompileInputs.cache
+E:\Programacao\Projects\chatapp\BackEnd\Chatapp.Core\obj\Debug\net8.0\Chatapp.Core.sourcelink.json
+E:\Programacao\Projects\chatapp\BackEnd\Chatapp.Core\obj\Debug\net8.0\Chatapp.Core.dll
+E:\Programacao\Projects\chatapp\BackEnd\Chatapp.Core\obj\Debug\net8.0\refint\Chatapp.Core.dll
+E:\Programacao\Projects\chatapp\BackEnd\Chatapp.Core\obj\Debug\net8.0\Chatapp.Core.pdb
+E:\Programacao\Projects\chatapp\BackEnd\Chatapp.Core\obj\Debug\net8.0\ref\Chatapp.Core.dll

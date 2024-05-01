@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Chatapp.Repository
-build_property.ProjectDir = C:\Users\tobia\Projects\chatapp\BackEnd\Chatapp.Repository\
+build_property.ProjectDir = E:\Programacao\Projects\chatapp\BackEnd\Chatapp.Repository\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
