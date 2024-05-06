@@ -95,7 +95,7 @@ terraform.rc
 /coverage
 
 # next.js
-Frontend/.next/
+/Frontend/.next/
 /out/
 
 # production
