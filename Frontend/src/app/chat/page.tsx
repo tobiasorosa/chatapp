@@ -5,7 +5,8 @@ import styles from "../page.module.css";
 import { useEffect, useState } from "react";
 import io from "socket.io-client";
 
-const socket = io("http://localhost:3001");
+const socket = io("https://localhost:44359/hubs/chat");
+console.log(socket)
 
 export default function Home() {
   const [messages, setMessages] = useState([]);
@@ -16,6 +17,8 @@ export default function Home() {
     socket.on("chat message", (message) => {
       setMessages((prevMessages) => [...prevMessages, message]);
     });
+
+    const apiResult = fetch("https://localhost:44359/user");
   }, []);
 
   const sendMessage = () => {

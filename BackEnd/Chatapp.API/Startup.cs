@@ -1,31 +1,36 @@
-﻿using Chatapp.Core.Extensions;
-using System.Reflection;
+using Chatapp.Core.Extensions;
 
 namespace Chatapp.API
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, IWebHostEnvironment environment)
         {
             Configuration = configuration;
+            Environment = environment;
+            AllowedOrigins = Configuration["Origins"]?.Split(";")?.ToList() ?? new List<string>();
         }
 
         public IConfiguration Configuration { get; }
+        public IWebHostEnvironment Environment { get; }
         private List<string> AllowedOrigins { get; }
         private static string CorsPolicyName => "DefaultCorsPolicy";
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
-            services.AddRepositories(Assembly.GetExecutingAssembly()); // Assuming you have the AddRepositories extension method
-            services.ConfigureMediatr();
+            services
+                .ConfigureMediatr()
+                .ConfigureSwagger()
+                .ConfigureAuthorization()
+                .ConfigureSignalr()
+                .ConfigureCors(CorsPolicyName, AllowedOrigins.ToArray())
+                .ConfigureControllers();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app)
         {
-            if (env.IsDevelopment())
+            if (Environment.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
                 app.BuilderSwagger();
@@ -37,12 +42,11 @@ namespace Chatapp.API
             }
 
             app
-            .BuilderCompression()
             .BuilderRouting()
             .BuilderCors(CorsPolicyName)
             .BuilderWebSockets(AllowedOrigins.ToArray())
             .BulderAuthentication()
-            .BuilderEndpoints();
+            .BuilderEndpoints(CorsPolicyName);
         }
     }
 }

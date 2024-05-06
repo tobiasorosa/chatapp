@@ -1,41 +1,39 @@
-using Microsoft.AspNetCore.Authentication.Negotiate;
-using Chatapp.Core.Hubs;
+using System.Globalization;
+using Chatapp.API;
+using Chatapp.Core.Serilog;
+using Serilog;
 
-var builder = WebApplication.CreateBuilder(args);
-
-// Add services to the container.
-
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
-builder.Services.AddSignalR();
-
-builder.Services.AddAuthentication(NegotiateDefaults.AuthenticationScheme)
-   .AddNegotiate();
-
-builder.Services.AddAuthorization(options =>
+namespace Chatapp
 {
-    // By default, all incoming requests will be authorized according to the default policy.
-    options.FallbackPolicy = options.DefaultPolicy;
-});
+    public class Program
+    {
+        public static void Main(string[] args)
+        {
+            Logger.Bootstrap(() =>
+            {
+                CreateWebHostBuilder(args).Build().Run();
+            });
+        }
 
-var app = builder.Build();
+        public static IHostBuilder CreateWebHostBuilder(string[] args) =>
+            Host.CreateDefaultBuilder(args)
+            .UseSerilog((context, services, configuration) =>
+            {
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
+                configuration.WriteToDebug(typeof(Program), context.Configuration, services);
+            })
+            .ConfigureWebHostDefaults(webBuilder =>
+            {
+                webBuilder.ConfigureAppConfiguration((hostingContext, config) =>
+                {
+                    config.AddEnvironmentVariables();
+                })
+                .UseStartup<Startup>();
+            })
+            .UseDefaultServiceProvider((context, options) =>
+            {
+                options.ValidateOnBuild = false;
+                options.ValidateScopes = false;
+            });
+    }
 }
-
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
-app.MapControllers();
-
-app.MapHub<ChatHub>("/chat"); // todo trocar nome
-
-app.Run();

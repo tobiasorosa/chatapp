@@ -1,10 +1,16 @@
-﻿using Chatapp.API;
+using Chatapp.Core.Hubs;
 using Chatapp.Core.Mediatr;
 using Chatapp.Core.OpenApi.Schemas;
+using Chatapp.Core.Web.Conventions;
+using Chatapp.Core.WebSocket.Providers;
 using MediatR;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.DependencyInjection;
+using MessagePack;
+using Microsoft.AspNetCore.Components.Web;
+using Microsoft.AspNetCore.SignalR;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using Npgsql.Internal;
+using System;
 using System.Reflection;
 
 namespace Chatapp.Core.Extensions
@@ -43,19 +49,30 @@ namespace Chatapp.Core.Extensions
             return services;
         }
 
-        public static IApplicationBuilder BuilderCompression(this IApplicationBuilder app)
+        public static IApplicationBuilder BuilderEndpoints(this IApplicationBuilder app, string corsPolicyName)
         {
-            return app.UseResponseCompression();
+            return app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapHub<ChatHub>("/hubs/chat")
+                    .RequireCors(corsPolicyName);
+
+                endpoints.MapControllers()
+                    .RequireCors(corsPolicyName);
+            });
         }
 
-        public static IApplicationBuilder BuilderRouting(this IApplicationBuilder app)
+        public static IServiceCollection ConfigureCors(this IServiceCollection services, string corsName, params string[] allowedOrigins)
         {
-            return app.UseRouting();
-        }
-
-        public static IApplicationBuilder BuilderCors(this IApplicationBuilder app, string corsName)
-        {
-            return app.UseCors(corsName);
+            return services.AddCors(options =>
+            {
+                options.AddPolicy(corsName,
+                builder =>
+                {
+                    builder.WithOrigins("*")
+                    .AllowAnyMethod()
+                    .AllowAnyHeader();
+                });
+            });
         }
 
         public static IApplicationBuilder BuilderWebSockets(this IApplicationBuilder app, params string[] allowedOrigins)
@@ -74,6 +91,16 @@ namespace Chatapp.Core.Extensions
             return app.UseWebSockets(webSocketOptions);
         }
 
+        public static IApplicationBuilder BuilderRouting(this IApplicationBuilder app)
+        {
+            return app.UseRouting();
+        }
+
+        public static IApplicationBuilder BuilderCors(this IApplicationBuilder app, string corsName)
+        {
+            return app.UseCors(corsName);
+        }
+
         public static IApplicationBuilder BulderAuthentication(this IApplicationBuilder app)
         {
             return app
@@ -81,27 +108,41 @@ namespace Chatapp.Core.Extensions
                 .UseAuthorization();
         }
 
-        public static IApplicationBuilder BuilderEndpoints(this IApplicationBuilder app)
+        public static IServiceCollection ConfigureAuthorization(this IServiceCollection services)
         {
-            return app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllers();
-            });
+            services
+            .AddAuthorization()
+            .AddAuthentication();
+
+            return services;
         }
 
-        public static IServiceCollection ConfigureCors(this IServiceCollection services, string corsName, params string[] allowedOrigins)
+        public static IServiceCollection ConfigureSignalr(this IServiceCollection services)
         {
-            return services.AddCors(options =>
-            {
-                options.AddPolicy(corsName,
-                builder =>
+            services.AddConnections();
+
+            services
+                .AddSignalR()
+                .AddJsonProtocol(options =>
                 {
-                    builder.WithOrigins(allowedOrigins)
-                    .AllowAnyMethod()
-                    .AllowAnyHeader()
-                    .AllowCredentials();
+                    options.PayloadSerializerOptions.IgnoreNullValues = true;
+                })
+                .AddMessagePackProtocol(options =>
+                {
+                    options.SerializerOptions = MessagePackSerializerOptions.Standard
+                                                                            .WithSecurity(MessagePackSecurity.UntrustedData);
                 });
-            });
+
+            services.AddSingleton<IUserIdProvider, UserIdProvider>();
+
+            return services;
+        }
+
+        public static IMvcBuilder ConfigureControllers(this IServiceCollection services)
+        {
+            return services
+                .AddControllers()
+                .AddControllersAsServices();
         }
     }
 }
